@@ -103,6 +103,11 @@ The site must stay on Spark to keep the "$0 forever" promise. If anyone is ever 
 
 This site has been refined by repeatedly asking Claude to roleplay critics. Chapter 07 documents the technique explicitly. Past virtual board reviews used Steve Wozniak (accessibility), Steve Jobs (narrative + ruthless editing), and Richard Feynman (pedagogy + honesty). If you ship a meaningful change, consider running another board before merging.
 
+## Changelog
+
+- **v0.2 — 2026-05-22.** Expanded from 3 to 7 chapters after a virtual board review (Woz / Jobs / Feynman). Added *The Lay of the Land*, *First Repo*, *Terminal & Claude Folder*, and *Asking Harder Questions*. Rewrote *Pick the Right Plan* to lead with a Max recommendation backed by concrete math. First publicly shareable cut.
+- **v0.1 — 2026-05-22.** MVP. Landing page + 3 chapters (account, plan, install). Deployed to Firebase Hosting on the Spark free tier.
+
 ## License
 
 Personal project, all rights reserved for now. Reach out if you want to adapt it for your own community.
