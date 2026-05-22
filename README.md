@@ -4,7 +4,7 @@ A free, beginner-friendly training site that walks anyone — from a total newco
 
 **Live:** [claude-helper-kc.web.app](https://claude-helper-kc.web.app)
 
-The goal is a **0 → 100** path: create a Claude account, pick the right plan, install Claude Code, link GitHub, learn what's possible. Warm tone, plain language, no jargon, no upsell.
+The goal is a real **0 → 100** path: create a Claude account, understand the landscape, set up GitHub and your computer, install Claude Code, and learn the meta-skill of asking sharper questions. Warm tone, plain language, no jargon-without-definition, no upsell.
 
 ---
 
@@ -12,29 +12,32 @@ The goal is a **0 → 100** path: create a Claude account, pick the right plan, 
 
 I (Kyle) learned Claude Code, was floored, and wanted to put it into the hands of friends, family, and coworkers — without making them watch a 30-minute YouTube video or wade through reference docs. This is the guide I wish I'd handed people on day one.
 
-## What's shipped (v0.1 — MVP)
+## What's in the guide (v0.2 — 7 chapters)
 
-- **Landing page** — warm editorial design, chapter list, author's note
-- **Chapter 01** — Make your Claude account
-- **Chapter 02** — Pick the right plan (Free / Pro / Max, honest framing)
-- **Chapter 03** — Install Claude Code & link GitHub
+1. **Make your Claude account** — sign up on claude.ai
+2. **Pick the right plan** — the honest pitch for Max ($100/mo) as self-investment, with a stepped path for the uncertain
+3. **The lay of the land** — what Anthropic, GitHub, and GCP each are
+4. **Make a GitHub account & your first repo** — repositories explained, public vs private, hands-on creation
+5. **Open your terminal & set up your Claude folder** — terminal basics + the `~/claude/project-name` habit
+6. **Install Claude Code & link GitHub** — the hands-on chapter where everything clicks
+7. **Asking Claude harder questions** — the meta-skill: board-of-directors reviews, roleplay critics, sharper thinking
 
 ## Roadmap
 
-The MVP covers roughly **0 → 30**. To get to a full 0 → 100, next up:
+Currently at roughly **0 → 70**. To round out the full 0 → 100:
 
-- [ ] **Chapter 04 — Set up Google Cloud (free tier).** Account, project, free tier, what to enable, what to avoid.
-- [ ] **Chapter 05 — A tour of what Claude Code can do.** Real examples: writing a Python script, refactoring code, summarizing a PDF, automating a small chore.
-- [ ] **Chapter 06 — Habits of effective use.** Prompting style, when to push back, when to start over, version control.
-- [ ] Real screenshots in every lesson
-- [ ] A "share this with a friend" button + simple referral text
-- [ ] Glossary page (CLI, terminal, repo, etc.)
-- [ ] Troubleshooting page (common install / sign-in errors)
+- [ ] Real screenshots in every lesson (currently text-only)
+- [ ] A "share with a friend" CTA on the landing page
+- [ ] A glossary page (CLI, terminal, repo, commit, branch, etc.)
+- [ ] A troubleshooting page (common install / sign-in errors)
+- [ ] A "what to build first" gallery — concrete project ideas matched to skill level
+- [ ] A short habits chapter (prompting style, version control hygiene, knowing when to start over)
 - [ ] Dark mode toggle (optional)
+- [ ] Light analytics (privacy-respecting) so we can see which chapters lose people
 
 ## Design
 
-Aesthetic direction is **warm editorial / personal letter**, not corporate or AI-startup.
+Aesthetic direction: **warm editorial / personal letter** — not corporate, not generic AI-startup.
 
 - **Type:** Instrument Serif (display) · Newsreader (body) · JetBrains Mono (code/labels)
 - **Palette:** cream paper `#F5EFE3` · deep ink `#1C1611` · terracotta accent `#C4502A`
@@ -47,16 +50,20 @@ No build step — plain HTML/CSS/JS so anyone reading the source can follow alon
 
 ```
 .
-├── public/                     # everything Firebase serves
-│   ├── index.html              # landing page
-│   ├── styles.css              # all styles
-│   ├── script.js               # scroll reveals
+├── public/
+│   ├── index.html                            # landing page
+│   ├── styles.css
+│   ├── script.js
 │   └── lessons/
 │       ├── 01-create-account.html
 │       ├── 02-pick-subscription.html
-│       └── 03-setup-claude-code.html
-├── firebase.json               # hosting config (cleanUrls, cache headers)
-├── .firebaserc                 # pins project to claude-helper-kc
+│       ├── 03-lay-of-the-land.html
+│       ├── 04-github-and-first-repo.html
+│       ├── 05-terminal-and-folders.html
+│       ├── 06-install-claude-code.html
+│       └── 07-asking-harder-questions.html
+├── firebase.json
+├── .firebaserc                               # pins project to claude-helper-kc
 └── README.md
 ```
 
@@ -68,7 +75,7 @@ No build step. Either:
 # Quick: just open the file
 open public/index.html
 
-# Better: serve locally so cleanUrls (lessons/01-create-account) work like prod
+# Better: serve locally so cleanUrls (e.g. lessons/03-lay-of-the-land) work like prod
 firebase serve --only hosting
 # then visit http://localhost:5000
 ```
@@ -79,7 +86,7 @@ firebase serve --only hosting
 firebase deploy --only hosting
 ```
 
-That's it. The site goes live at https://claude-helper-kc.web.app on the next page load.
+The site goes live at https://claude-helper-kc.web.app on the next page load.
 
 ## Hosting & cost
 
@@ -90,7 +97,11 @@ Hosted on **Firebase Hosting Spark plan** (free tier). No billing enabled, no cr
 - Free SSL on `*.web.app`
 - Global CDN
 
-The site must stay on Spark to keep the "$0 forever" promise. If you (future me, or another contributor) ever feel tempted to enable Blaze, custom domains with paid SSL, or Cloud Functions — pause and find a free alternative first.
+The site must stay on Spark to keep the "$0 forever" promise. If anyone is ever tempted to enable Blaze, custom domains with paid SSL, or Cloud Functions — pause and find a free alternative first.
+
+## Method note
+
+This site has been refined by repeatedly asking Claude to roleplay critics. Chapter 07 documents the technique explicitly. Past virtual board reviews used Steve Wozniak (accessibility), Steve Jobs (narrative + ruthless editing), and Richard Feynman (pedagogy + honesty). If you ship a meaningful change, consider running another board before merging.
 
 ## License
 

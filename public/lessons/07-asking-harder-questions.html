@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 07 — Asking Claude harder questions · Claude Helper</title>
+  <meta name="description" content="The single most useful prompting technique you can learn early — how to ask Claude to roleplay critics and give you sharper feedback than 'what do you think?' ever will.">
+  <meta name="theme-color" content="#F5EFE3">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="masthead">
+    <div class="masthead-mark"><a href="../">Claude Helper</a></div>
+    <div class="masthead-meta">Chapter 07 of 07</div>
+  </header>
+
+  <article class="lesson prose">
+    <header class="lesson-header">
+      <div class="lesson-stamp">The meta-skill · 8 minutes</div>
+      <h1 class="lesson-title">Asking Claude <em>harder questions</em>.</h1>
+      <div class="lesson-meta">
+        <span>Cost · $0</span>
+        <span>Needed · something you've made</span>
+        <span>Difficulty · easy to start, deep to master</span>
+      </div>
+    </header>
+
+    <div class="lesson-body">
+      <p class="intro">You can have a great relationship with Claude using only simple questions. But there's a meta-skill that separates good users from great ones — knowing how to ask Claude harder, weirder, more demanding things. This chapter teaches one of the most useful versions of that skill: the board-of-directors review.</p>
+
+      <h2>The basic move</h2>
+      <p>Claude is a very good roleplayer. When you ask it to pretend to be someone with a specific perspective — and to critique your work <em>from</em> that perspective — you get feedback that's wildly more useful than "what do you think of this?"</p>
+      <p>The shape of the prompt is:</p>
+      <div class="aside">
+        <em>"Pretend you are [PERSON OR ROLE]. From that perspective, review [THE THING I'M GIVING YOU]. Be specific. Be critical. Don't soften."</em>
+      </div>
+      <p>That's it. That's the move.</p>
+
+      <h2>A real example — the board of directors review</h2>
+      <p>The author of this site used this exact technique to improve what you're reading. The prompt was something like:</p>
+      <div class="aside">
+        <em>"Conduct a full review of the current site from a virtual board of directors. Have Steve Wozniak, Steve Jobs, and Richard Feynman each give their critique. Be specific. Don't merge them — let each one have their own voice."</em>
+      </div>
+      <p>What came back was three independent reads of the same work, each from a different angle:</p>
+      <ul>
+        <li><strong>Woz</strong> cared about accessibility — was every new word defined, did beginners have a path?</li>
+        <li><strong>Jobs</strong> cared about destination and ruthless editing — was every line earning its place?</li>
+        <li><strong>Feynman</strong> cared about honesty and comprehension — could the reader actually do the thing afterward?</li>
+      </ul>
+      <p>The result: a sharper, more honest, more useful site than any single round of critique could have produced. (Including chapters 03, 05, and 07 — which exist because the board insisted.)</p>
+
+      <h2>Who to put on your board</h2>
+      <p>The trick is picking people whose perspectives genuinely clash with each other and with your own blind spots. A few categories to mix from:</p>
+      <ul>
+        <li><strong>The skeptic.</strong> Someone who hates everything until proven otherwise. <em>"Have a cynical newspaper editor tear this apart."</em></li>
+        <li><strong>The novice.</strong> Someone who is exactly your target reader and is allowed to be confused. <em>"Pretend you're my 70-year-old aunt who has never used a terminal."</em></li>
+        <li><strong>The expert.</strong> Someone whose standards are intimidatingly high. <em>"Pretend you're a senior engineer at a big tech company."</em></li>
+        <li><strong>The artist.</strong> Someone who cares about taste. <em>"Pretend you're the editor of a literary magazine."</em></li>
+        <li><strong>The historical figure.</strong> Someone whose work you admire. <em>"Pretend you're Steve Jobs in 2007. What's missing?"</em></li>
+      </ul>
+      <p>The point isn't to channel real people accurately — it's to use the names as shortcuts for distinct mental modes.</p>
+
+      <h2>A few more uses for this technique</h2>
+      <ul>
+        <li><strong>Writing:</strong> "Pretend you're an editor at The New Yorker. Where does this lose me?"</li>
+        <li><strong>Code:</strong> "Pretend you're a security engineer. Where could this break?"</li>
+        <li><strong>Plans:</strong> "Pretend you're the person who has to execute this. What's unrealistic?"</li>
+        <li><strong>Decisions:</strong> "Give me four different stakeholders' takes on this choice."</li>
+        <li><strong>Self-reflection:</strong> "Pretend you're a kind, wise mentor. What would you say to me about how I'm spending my time?"</li>
+      </ul>
+
+      <div class="note">
+        <span class="note-label">Try this now</span>
+        Pick anything you've made recently — a piece of writing, an email draft, a plan, a piece of code, a slide deck. Go to Claude (claude.ai or Claude Code) and ask:
+        <pre style="margin-top: 0.75rem;"><code>Review this from the perspective of three different people:
+1. [a skeptic]
+2. [a novice]
+3. [an expert]
+
+Let each voice be distinct. Be specific. Don't merge them.
+
+[paste your thing here]</code></pre>
+        See what comes back.
+      </div>
+
+      <h2>Why this works (a Feynman note)</h2>
+      <p>The reason this technique works is that Claude has read an enormous amount of writing — including writing by and about all the people you might ask it to roleplay. When you say "what would Feynman say," you're not getting the real Feynman; you're getting a distillation of how a careful, honest, curious thinker tends to evaluate work.</p>
+      <p>That distillation is genuinely useful, even when imperfect.</p>
+
+      <h2>The closing note</h2>
+      <p>This is what 1-to-100 looks like in practice: less "ask Claude for help with this thing," more "use Claude to make my thinking sharper." When you stop asking Claude for answers and start asking it for <em>critiques, alternatives, and pressure tests</em>, you graduate from user to collaborator.</p>
+      <p>You now have everything you need:</p>
+      <ul>
+        <li>An account (Ch 01)</li>
+        <li>A plan that fits (Ch 02)</li>
+        <li>Vocabulary (Ch 03)</li>
+        <li>A place for your code (Ch 04)</li>
+        <li>A tidy workspace (Ch 05)</li>
+        <li>Claude Code in your terminal (Ch 06)</li>
+        <li>A meta-skill to keep getting better (Ch 07)</li>
+      </ul>
+      <p>Go make something. Tell a friend about this guide. Be patient with yourself. The first month feels like learning a new language; the second month feels like a quiet superpower.</p>
+      <p>Welcome to the workflow.</p>
+    </div>
+
+    <nav class="lesson-nav">
+      <a href="06-install-claude-code.html" class="prev">
+        <span>Previous chapter</span>
+        ← Install Claude Code
+      </a>
+      <a href="../" class="next">
+        <span>Back to</span>
+        Contents →
+      </a>
+    </nav>
+  </article>
+
+  <footer class="colophon">
+    <div>Free forever · Hosted on GCP</div>
+    <div><a href="https://github.com/kylecurtin/claude-helper">Source on GitHub</a></div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

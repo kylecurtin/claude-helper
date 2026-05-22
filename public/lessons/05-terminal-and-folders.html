@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 05 — Your terminal &amp; Claude folder · Claude Helper</title>
+  <meta name="description" content="Open your terminal for the first time, learn three commands, and set up a tidy Claude folder for every project you'll ever make.">
+  <meta name="theme-color" content="#F5EFE3">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="masthead">
+    <div class="masthead-mark"><a href="../">Claude Helper</a></div>
+    <div class="masthead-meta">Chapter 05 of 07</div>
+  </header>
+
+  <article class="lesson prose">
+    <header class="lesson-header">
+      <div class="lesson-stamp">Lesson · 10 minutes</div>
+      <h1 class="lesson-title">Open your <em>terminal</em> &amp; set up your <em>Claude folder</em>.</h1>
+      <div class="lesson-meta">
+        <span>Cost · $0</span>
+        <span>Needed · your computer</span>
+        <span>Difficulty · gentle, with a leap</span>
+      </div>
+    </header>
+
+    <div class="lesson-body">
+      <p class="intro">Every computer you've ever used has a hidden text-based interface behind its friendly windows and icons. It's called the terminal, and it's been there all along. We're going to open it for the first time and use it to set up a tidy home for every Claude project you'll ever make.</p>
+
+      <h2>What is a terminal?</h2>
+      <p>A terminal is a window where you type commands and your computer does what you tell it. No mouse, no buttons — just text in, text out.</p>
+      <p>It feels old-fashioned because it is. It's also the fastest way to do many things on a computer, and it's how Claude Code works. Don't let it intimidate you. It's just a window that listens.</p>
+
+      <h2>Open it</h2>
+      <ul>
+        <li><strong>Mac:</strong> press <code>⌘ + Space</code>, type "Terminal", press Enter.</li>
+        <li><strong>Windows:</strong> press the Windows key, type "PowerShell" or "Terminal", press Enter.</li>
+        <li><strong>Linux:</strong> you already know.</li>
+      </ul>
+      <p>A window opens. You'll see something like a <code>$</code> or <code>&gt;</code> symbol with a blinking cursor. That symbol is the <strong>prompt</strong> — your computer is patiently waiting for you to type something.</p>
+
+      <h2>Three commands to know forever</h2>
+      <p>Type each of these and press Enter. (Don't paste them all at once — one at a time.)</p>
+<pre><code>pwd</code></pre>
+      <p>Short for <em>print working directory</em>. It tells you where you are right now. You'll see a path like <code>/Users/yourname</code>. That's your home folder — the starting point.</p>
+<pre><code>ls</code></pre>
+      <p>Short for <em>list</em>. It shows what's in the current folder. You should see things like Desktop, Documents, Downloads — the same folders you see in Finder/Explorer.</p>
+<pre><code>cd Desktop</code></pre>
+      <p>Short for <em>change directory</em>. This walks you into your Desktop folder. Run <code>pwd</code> again and you'll see the path has changed.</p>
+      <p>To go back up one level: <code>cd ..</code> (two dots means "the folder containing me"). To go all the way home: <code>cd ~</code> (the tilde means "home").</p>
+      <p>Those four commands — <code>pwd</code>, <code>ls</code>, <code>cd</code>, <code>cd ..</code> — are 80% of what you need to navigate. The rest is just practice.</p>
+
+      <div class="note">
+        <span class="note-label">Try this now</span>
+        Walk into your Documents folder with <code>cd ~/Documents</code>. Run <code>ls</code>. Walk back home with <code>cd ~</code>. Run <code>pwd</code> to confirm. You've now used the terminal more than 90% of computer users ever do.
+      </div>
+
+      <h2>Make your Claude folder</h2>
+      <p>Here's the habit I'd recommend forming on day one: a single parent folder called <code>claude</code> in your home directory, holding every project you do with Claude. Inside that parent, one folder per project.</p>
+      <p>In your terminal, make sure you're home with <code>cd ~</code>, then type these three commands one at a time:</p>
+<pre><code>mkdir claude
+cd claude
+mkdir hello-claude</code></pre>
+      <p>What just happened:</p>
+      <ul>
+        <li><code>mkdir claude</code> — made a new folder called "claude" in your home directory. (<code>mkdir</code> = make directory.)</li>
+        <li><code>cd claude</code> — walked into it.</li>
+        <li><code>mkdir hello-claude</code> — made your first project folder inside.</li>
+      </ul>
+
+      <h2>Why this matters</h2>
+      <p>Software people are nearly religious about file organization. The reason is dull but real: it pays dividends every single day. The <code>claude/project-name</code> pattern means:</p>
+      <ul>
+        <li>Every project is self-contained. Nothing leaks between them.</li>
+        <li>Claude Code, when you run it inside a project folder, only sees that project. No accidental edits to other work.</li>
+        <li>A year from now, you can find anything in two seconds: <code>cd ~/claude/the-thing-i-made</code>.</li>
+      </ul>
+      <p><strong>Make a new folder for every new project. Always.</strong> Future you will be grateful.</p>
+
+      <div class="note">
+        <span class="note-label">Try this now</span>
+        Make a second project folder. From inside <code>~/claude</code>, type:
+<pre style="margin-top: 0.5rem;"><code>mkdir my-second-project
+cd my-second-project
+pwd</code></pre>
+        You should be inside <code>claude/my-second-project</code>. You now have a parent folder, two project folders inside it, and the beginning of a habit that will keep your life tidy.
+      </div>
+
+      <div class="aside">
+        <strong>A small joy:</strong> in a year, when you have a dozen projects in your <code>claude</code> folder — each one a thing you made, each one with its own commit history — you'll feel something pleasant. The feeling is called <em>accumulation</em>, and it's one of the underrated rewards of doing things in writing.
+      </div>
+
+      <h2>Onward</h2>
+      <p>Next chapter is the big one: installing Claude Code itself, signing in, and pointing it at one of these project folders so it can start writing files <em>for</em> you.</p>
+    </div>
+
+    <nav class="lesson-nav">
+      <a href="04-github-and-first-repo.html" class="prev">
+        <span>Previous chapter</span>
+        ← First repo
+      </a>
+      <a href="06-install-claude-code.html" class="next">
+        <span>Next chapter</span>
+        Install Claude Code →
+      </a>
+    </nav>
+  </article>
+
+  <footer class="colophon">
+    <div>Free forever · Hosted on GCP</div>
+    <div><a href="https://github.com/kylecurtin/claude-helper">Source on GitHub</a></div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

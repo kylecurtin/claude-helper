@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 06 — Install Claude Code &amp; link GitHub · Claude Helper</title>
+  <meta name="description" content="Install Claude Code on your computer and connect it to your GitHub account. The hands-on chapter where everything clicks together.">
+  <meta name="theme-color" content="#F5EFE3">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="masthead">
+    <div class="masthead-mark"><a href="../">Claude Helper</a></div>
+    <div class="masthead-meta">Chapter 06 of 07</div>
+  </header>
+
+  <article class="lesson prose">
+    <header class="lesson-header">
+      <div class="lesson-stamp">Lesson · 15 minutes</div>
+      <h1 class="lesson-title">Install <em>Claude Code</em> &amp; link GitHub.</h1>
+      <div class="lesson-meta">
+        <span>Cost · $0 to install</span>
+        <span>Needed · Pro or Max, your terminal, your GitHub</span>
+        <span>Difficulty · we take it slow</span>
+      </div>
+    </header>
+
+    <div class="lesson-body">
+      <p class="intro">Claude Code is Claude that lives in your terminal — the text-based window you opened in the last chapter. You type in plain English, and it reads, writes, and runs code with you. Once you've used it, ordinary text editors feel a little lonely. This is the chapter where everything starts clicking together.</p>
+
+      <h2>Before we start — your checklist</h2>
+      <ul>
+        <li>A Claude account on Pro or Max (Chapters 01 + 02). ✅</li>
+        <li>A GitHub account with at least one repo (Chapter 04). ✅</li>
+        <li>A <code>~/claude/hello-claude</code> folder on your computer (Chapter 05). ✅</li>
+        <li>Your terminal open. ✅</li>
+      </ul>
+
+      <h2>Step 1 — install Claude Code</h2>
+      <p>In your terminal, paste this and press Enter:</p>
+<pre><code>curl -fsSL https://claude.ai/install.sh | bash</code></pre>
+      <p>The installer downloads Claude Code and adds the <code>claude</code> command to your computer. When it finishes, close the terminal window and open a new one (so it picks up the new command).</p>
+
+      <div class="note">
+        <span class="note-label">Prefer npm?</span>
+        If you already have Node.js installed and prefer that route: <code>npm install -g @anthropic-ai/claude-code</code> works too.
+      </div>
+
+      <h2>Step 2 — sign in</h2>
+      <p>In your new terminal window, type:</p>
+<pre><code>claude</code></pre>
+      <p>The first time you run this, it opens a browser tab and asks you to sign in to your Anthropic account. Sign in, approve the connection, and return to the terminal. You'll see a friendly prompt waiting for you. Type <code>/exit</code> to close it for now — we have more setup to do first.</p>
+
+      <h2>Step 3 — install the GitHub CLI</h2>
+      <p>Claude Code talks to GitHub through a small tool called <code>gh</code>. Install it once and forget about it:</p>
+      <ul>
+        <li><strong>Mac:</strong> <code>brew install gh</code>. (Need Homebrew first? See <a href="https://brew.sh" target="_blank" rel="noopener">brew.sh</a>.)</li>
+        <li><strong>Windows:</strong> <code>winget install --id GitHub.cli</code></li>
+        <li><strong>Linux:</strong> follow the instructions at <a href="https://cli.github.com" target="_blank" rel="noopener">cli.github.com</a>.</li>
+      </ul>
+
+      <h2>Step 4 — link your GitHub</h2>
+      <p>Still in your terminal:</p>
+<pre><code>gh auth login</code></pre>
+      <p>Choose <em>GitHub.com</em>, choose <em>HTTPS</em>, and let it log you in through your browser. Done — your computer is now allowed to talk to your GitHub on your behalf.</p>
+
+      <div class="aside">
+        <strong>What just happened:</strong> you proved to GitHub that this computer is really yours. From now on, Claude Code can read your repos, push commits, and create new repositories — all with your permission.
+      </div>
+
+      <h2>Step 5 — your first real Claude Code moment</h2>
+      <p>Walk into the project folder you made in Chapter 05 and start Claude Code:</p>
+<pre><code>cd ~/claude/hello-claude
+claude</code></pre>
+      <p>When Claude Code is running, try a friendly first prompt:</p>
+      <div class="aside">
+        <em>"Create a tiny webpage that says hello, with a soft background color and a nicer font than the default. Then open it in my browser."</em>
+      </div>
+      <p>Claude will think for a moment, then write the file. It may ask permission before doing anything — say yes. Open the page, see what it made, then tell Claude what you'd change: bigger heading, different color, add a button. Watch it edit in place. That's the loop.</p>
+
+      <div class="note">
+        <span class="note-label">Try this now</span>
+        Ask Claude Code: <em>"Make a private repo on GitHub called hello-claude, push everything in this folder to it, and give me the link."</em> Claude will use the <code>gh</code> tool we just set up. In under a minute, you'll have a real GitHub repo connected to your real computer, set up entirely by Claude.
+      </div>
+
+      <h2>Where to go from here</h2>
+      <p>You did it. You have an account, a plan, a GitHub, a terminal, a Claude folder, Claude Code on your machine, and a GitHub link.</p>
+      <p>For 1-to-100, just <em>use it</em>. Ask Claude to help with anything text-shaped: writing emails, planning a trip, organizing a spreadsheet, building a website, learning a language. The more specific you are about what you want and what you don't, the better the answer.</p>
+      <p>The next chapter shows you the single most useful technique for getting better at this faster: how to ask Claude harder questions.</p>
+    </div>
+
+    <nav class="lesson-nav">
+      <a href="05-terminal-and-folders.html" class="prev">
+        <span>Previous chapter</span>
+        ← Terminal &amp; Claude folder
+      </a>
+      <a href="07-asking-harder-questions.html" class="next">
+        <span>Next chapter</span>
+        Asking harder questions →
+      </a>
+    </nav>
+  </article>
+
+  <footer class="colophon">
+    <div>Free forever · Hosted on GCP</div>
+    <div><a href="https://github.com/kylecurtin/claude-helper">Source on GitHub</a></div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 04 — Make a GitHub account &amp; your first repo · Claude Helper</title>
+  <meta name="description" content="A patient walk-through of making your GitHub account and creating your first repository. Includes a plain-language explainer of public vs private.">
+  <meta name="theme-color" content="#F5EFE3">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="masthead">
+    <div class="masthead-mark"><a href="../">Claude Helper</a></div>
+    <div class="masthead-meta">Chapter 04 of 07</div>
+  </header>
+
+  <article class="lesson prose">
+    <header class="lesson-header">
+      <div class="lesson-stamp">Lesson · 10 minutes</div>
+      <h1 class="lesson-title">Make a <em>GitHub account</em> &amp; your first repo.</h1>
+      <div class="lesson-meta">
+        <span>Cost · $0</span>
+        <span>Needed · an email, a username you'll like</span>
+        <span>Difficulty · gentle</span>
+      </div>
+    </header>
+
+    <div class="lesson-body">
+      <p class="intro">Now we make your GitHub account and create your first repository. By the end of this chapter you'll own a real, working corner of the internet where projects can live and grow.</p>
+
+      <h2>Step 1 — make the account</h2>
+      <ol>
+        <li>Go to <a href="https://github.com" target="_blank" rel="noopener">github.com</a>.</li>
+        <li>Click <strong>Sign up</strong>.</li>
+        <li>Pick a username you'll be happy with. It shows up in URLs, like <code>github.com/your-name</code>. Tip: simple is better than clever, and you can't easily change it later.</li>
+        <li>Use the same email you used for Claude in Chapter 01. This makes things smoother later.</li>
+        <li>Verify your email.</li>
+        <li>Pick the <strong>free</strong> plan. GitHub's free tier is generous and is all you'll need.</li>
+      </ol>
+
+      <h2>Step 2 — make your first repo</h2>
+      <p>Once you're signed in, look for a green <strong>New</strong> button — or click the <strong>+</strong> icon in the top right corner, then <em>New repository</em>.</p>
+      <p>You'll be asked a few questions:</p>
+      <ul>
+        <li><strong>Repository name:</strong> something you'll recognize. For practice, try <code>hello-claude</code> or <code>my-first-repo</code>.</li>
+        <li><strong>Description:</strong> a short sentence about what's in here. "A place to practice with Claude" is perfectly fine.</li>
+        <li><strong>Public or Private:</strong> see the next section — this one deserves a moment.</li>
+        <li><strong>Initialize this repository with a README:</strong> check this box. A README is a starter file that explains what the project is.</li>
+      </ul>
+      <p>Hit <strong>Create repository</strong>.</p>
+
+      <h2>Public vs Private — when to pick which</h2>
+      <p>A lot of people new to GitHub make everything private out of caution. That's totally fine. But here's the honest framing:</p>
+      <ul>
+        <li><strong>Public</strong> — anyone in the world can find and read your repo. (They can't change it without your permission.) Good for: learning out loud, sharing with friends, open-source contributions, building a portfolio, asking strangers for help.</li>
+        <li><strong>Private</strong> — visible only to you and people you invite. Good for: anything with passwords or personal information, work secrets, drafts you're not ready to show.</li>
+      </ul>
+      <p>Most code on GitHub is public. There's a long, beautiful tradition of learning out loud — and a saying that if you're not embarrassed about your early work, you waited too long to share it.</p>
+      <p>For practice projects, <strong>public is great</strong>. For anything with secrets, always <strong>private</strong>. You can also change a repo's visibility later from its Settings page.</p>
+
+      <h2>What you just made</h2>
+      <p>You now have a folder on GitHub's servers that:</p>
+      <ul>
+        <li>Tracks every change you ever make to it (forever)</li>
+        <li>Has its own URL: <code>github.com/your-username/hello-claude</code></li>
+        <li>Can be linked to Claude Code in Chapter 06, so Claude can read and edit the files for you</li>
+      </ul>
+
+      <div class="note">
+        <span class="note-label">Try this now</span>
+        Click around the repo you just made. Notice the README file in the file list. Click on it. Try the pencil icon to make a tiny edit — change "Hello" to "Hello, world." Scroll down, write a short commit message ("update greeting"), hit <em>Commit changes</em>. Congratulations — you just made your first commit.
+      </div>
+
+      <h2>A side trip — what's a "commit"?</h2>
+      <p>A commit is a saved snapshot of your project at a specific moment, along with a short note describing what you changed. GitHub keeps every commit, forever. The list of your commits is the story of your project.</p>
+      <p>You don't need to memorize this. Claude Code will make commits for you. You just need to know that the word exists and roughly what it means.</p>
+
+      <div class="aside">
+        <strong>One reassurance:</strong> you can't really break GitHub. Click anything. Explore. The undo button has a long memory.
+      </div>
+
+      <h2>Onward</h2>
+      <p>Next chapter: opening your terminal for the first time and setting up a tidy <code>claude</code> folder on your computer to keep every project organized.</p>
+    </div>
+
+    <nav class="lesson-nav">
+      <a href="03-lay-of-the-land.html" class="prev">
+        <span>Previous chapter</span>
+        ← The lay of the land
+      </a>
+      <a href="05-terminal-and-folders.html" class="next">
+        <span>Next chapter</span>
+        Your terminal &amp; Claude folder →
+      </a>
+    </nav>
+  </article>
+
+  <footer class="colophon">
+    <div>Free forever · Hosted on GCP</div>
+    <div><a href="https://github.com/kylecurtin/claude-helper">Source on GitHub</a></div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
